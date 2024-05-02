@@ -1,50 +1,77 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [color, setColor] = useState('black')
+  // const [count, setCount] = useState(0)
+  const [color,setColor] = useState("gray")
 
   return (
     <>
-      <div className='h-screen w-full ' style={{ border: '2px solid black', background: color }}>
-        <div className='fixed flex flex-wrap justify-center bottom-8 inset-x-0 px-2' style={{ backgroundColor: 'white' }}>
-          <button className='rounded-sm p-2 mx-2' style={{ background: 'red', color: 'white' }}
-            onClick={() => {
-              setColor('red')
+      <div className='w-full min-h-screen text-white ' style={{background:color}}>
+        <div className='bg-black h-min fixed bottom-4 w-full flex justify-center'>
+          <button
+            className='bg-white text-black rounded-md m-2 p-2'
+            onClick={()=>{
+              setColor('white')
             }}
           >
-            Red
+            White
           </button>
-          <button className='rounded-sm p-2 mx-2' style={{ background: 'blue', color: 'white' }}
-            onClick={() => {
-              setColor('blue')
-            }}
-          >
-            Blue
-          </button>
-          <button className='rounded-sm p-2 mx-2' style={{ background: 'green', color: 'white' }}
-            onClick={() => {
+          <button
+            className='rounded-md m-2 p-2'
+            style={{background:'green'}}
+            onClick={()=>{
               setColor('green')
             }}
           >
             Green
           </button>
-          <button className='rounded-sm p-2 mx-2' style={{ background: 'yellow', color: 'black' }}
-            onClick={() => {
+          <button
+            className='text-white rounded-md m-2 p-2'
+            style={{background:'red'}}
+            onClick={()=>{
+              setColor('red')
+            }}
+          >
+            Red
+          </button>
+          <button
+            className=' text-white rounded-md m-2 p-2'
+            style={{background:'blue'}}
+            onClick={()=>{
+              setColor('blue')
+            }}
+          >
+            Blue
+          </button>
+          <button
+            className= 'text-white rounded-md m-2 p-2'
+            style={{background:'purple'}}
+            onClick={()=>{
+              setColor('purple')
+            }}
+          >
+            Purple
+          </button>
+          <button
+            className='text-black rounded-md m-2 p-2'
+            style={{background:'yellow'}}
+            onClick={()=>{
               setColor('yellow')
             }}
           >
-          Yellow
+            Yellow
           </button>
-          <button className='rounded-sm p-2 mx-2' style={{ background: 'pink', color: 'black' }}
-            onClick={() => {
-              setColor('pink')
+          <button
+            className='text-white rounded-md m-2 p-2'
+            style={{background:'brown'}}
+            onClick={()=>{
+              setColor('brown')
             }}
           >
-          Pink
+            Brown
           </button>
+          {/* <p>Hello</p> */}
         </div>
       </div>
     </>
